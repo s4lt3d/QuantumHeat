@@ -124,7 +124,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: ac5ffa7226daaa048824934935de2b68, type: 2}
 --- !u!1001 &2143836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11282,6 +11282,7 @@ GameObject:
   - component: {fileID: 604080693}
   - component: {fileID: 604080695}
   - component: {fileID: 604080694}
+  - component: {fileID: 604080696}
   m_Layer: 0
   m_Name: Left Hand
   m_TagString: Left Hand
@@ -11355,10 +11356,10 @@ MonoBehaviour:
   m_IsTrackedAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Is Tracked
       m_Type: 1
       m_ExpectedControlType: 
-      m_Id: 
+      m_Id: 39f4953e-c118-4a43-9d23-2184b0b7d5c3
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -11458,10 +11459,10 @@ MonoBehaviour:
   m_UIScrollAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: UI Scroll
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 
+      m_Id: 2bb160cf-2678-424a-8596-c953460b4204
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -11496,10 +11497,10 @@ MonoBehaviour:
   m_DirectionalAnchorRotationAction:
     m_UseReference: 0
     m_Action:
-      m_Name: 
+      m_Name: Directional Anchor Rotation
       m_Type: 0
       m_ExpectedControlType: Vector2
-      m_Id: 
+      m_Id: 32016d94-ebb6-42e6-b732-0e0981f0c607
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -11622,6 +11623,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_PhysicsTriggerInteraction: 1
+--- !u!114 &604080696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604080691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72075643539886a42ad8c08a9c4881fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &606485763 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1102363584748082429, guid: 528f6c40ba01da34f96f492e501fd927,
@@ -34638,6 +34651,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7ae0264ab15fbf48af5d533cb3e2d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTarget: {fileID: 1174778558}
+  stopDistance: 5
+--- !u!95 &1668353389
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668353386}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3ce3cdcdba6bc7f448e5011e1ec383aa, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!195 &1668353390
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668353386}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.22
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.76
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1001 &1675132352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42805,6 +42863,7 @@ GameObject:
   - component: {fileID: 2115540602}
   - component: {fileID: 2115540604}
   - component: {fileID: 2115540603}
+  - component: {fileID: 2115540605}
   m_Layer: 0
   m_Name: Right Hand
   m_TagString: Right Hand
@@ -43145,6 +43204,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_PhysicsTriggerInteraction: 1
+--- !u!114 &2115540605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115540600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72075643539886a42ad8c08a9c4881fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2128949352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43170,7 +43241,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6b0c08ef279aa3042a0ac4317f9a36be,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.44
+      value: -18.95
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b0c08ef279aa3042a0ac4317f9a36be,
         type: 3}
