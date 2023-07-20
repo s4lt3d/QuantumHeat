@@ -8,7 +8,7 @@ public class OnTriggerEnterDeath : MonoBehaviour
     {
         OnCollisionEnterDeath death = other.GetComponent<OnCollisionEnterDeath>();
 
-        if(death != null )
+        if(death != null)
         {
             death.enemy.Dead(transform.position);
         }

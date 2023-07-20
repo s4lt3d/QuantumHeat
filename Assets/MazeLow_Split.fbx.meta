@@ -14,12 +14,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Material.002
-    second: {fileID: 2100000, guid: f0270cf4f639a18479f8b52df8f6599d, type: 2}
+    second: {fileID: 2100000, guid: 4de279025b7111048b68a583763c43c3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: MazeLowMan.001
-    second: {fileID: 2100000, guid: 096e56f0dcf35ec45bb6890bd7611144, type: 2}
+    second: {fileID: 2100000, guid: 044cbea9e17945d48b923bfb7b3bd1fe, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
