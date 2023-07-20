@@ -5,9 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Quantum Heat.unity
+    guid: 5ac2a480c6ac54c46b72bf7caf6279eb
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 851b28f3c890ebf4091a8f9904220618,
       type: 2}

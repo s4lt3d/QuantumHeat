@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
@@ -11,25 +9,41 @@ public class FireBulletOnActivate : MonoBehaviour
     public AudioSource source;
     public AudioClip clip;
 
-    // Start is called before the first frame update
-    void Start()
+    private XRGrabInteractable grabbable;
+
+    private void Start()
     {
-        XRGrabInteractable grabbable = GetComponent<XRGrabInteractable>();
+        // Initialize grabbable and add FireBullet listener
+        grabbable = GetComponent<XRGrabInteractable>();
         grabbable.activated.AddListener(FireBullet);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // The update method is not used, so it's removed for readability
 
     public void FireBullet(ActivateEventArgs arg = null)
     {
+        // Create a bullet and launch it
+        GameObject spawnedBullet = SpawnBullet();
+        LaunchBullet(spawnedBullet);
+
+        // Play the gunshot sound
+        source.PlayOneShot(clip);
+    }
+
+    // Method to spawn a bullet
+    private GameObject SpawnBullet()
+    {
         GameObject spawnedBullet = Instantiate(bullet);
         spawnedBullet.transform.position = spawnPoint.position;
-        spawnedBullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
-        Destroy(spawnedBullet, 5);
-        source.PlayOneShot(clip);
+        return spawnedBullet;
+    }
+
+    // Method to launch the bullet
+    private void LaunchBullet(GameObject bullet)
+    {
+        bullet.GetComponent<Rigidbody>().velocity = spawnPoint.forward * fireSpeed;
+
+        // Destroy the bullet after 5 seconds
+        Destroy(bullet, 5);
     }
 }
